@@ -23,9 +23,17 @@ public class Scratch5StepsBasicApplication {
 //				new BinarySearchImpl(new QuickSortAlgorithm());
 		//Application Context
 		
-		ApplicationContext applicationContext = 
-				new AnnotationConfigApplicationContext(Scratch5StepsBasicApplication.class);
-//				SpringApplication.run(Scratch5StepsBasicApplication.class, args);
+		try(AnnotationConfigApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(Scratch5StepsBasicApplication.class))
+		{
+			performBsearch(applicationContext);
+		}
+		
+		
+	}
+	
+	static void performBsearch(ApplicationContext applicationContext)
+	{
 		BinarySearchImpl bSearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl bSearch1 = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(bSearch);
