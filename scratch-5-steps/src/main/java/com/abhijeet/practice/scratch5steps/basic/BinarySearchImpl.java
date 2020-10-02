@@ -1,5 +1,4 @@
-package com.abhijeet.practice.scratch5steps;
-
+package com.abhijeet.practice.scratch5steps.basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
