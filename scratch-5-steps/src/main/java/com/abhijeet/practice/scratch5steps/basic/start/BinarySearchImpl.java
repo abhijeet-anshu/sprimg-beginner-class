@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 @Scope("prototype") //by default singleton
 public class BinarySearchImpl {
 	
@@ -28,6 +28,7 @@ public class BinarySearchImpl {
 //		BubbleSortAlgorithm sortAlgo = new BubbleSortAlgorithm();
 		int[] sortedNumbers = sortAlgorithm.sort(numbers);
 		System.out.println(sortAlgorithm);
+		System.out.println(sortedNumbers);
 		//search an Array
 		//Return the result
 		return 3;
