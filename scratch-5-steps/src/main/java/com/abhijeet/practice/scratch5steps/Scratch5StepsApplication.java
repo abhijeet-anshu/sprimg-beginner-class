@@ -20,6 +20,9 @@ public class Scratch5StepsApplication {
 		ApplicationContext applicationContext = 
 				SpringApplication.run(Scratch5StepsApplication.class, args);
 		BinarySearchImpl bSearch = applicationContext.getBean(BinarySearchImpl.class);
+		BinarySearchImpl bSearch1 = applicationContext.getBean(BinarySearchImpl.class);
+		System.out.println(bSearch);
+		System.out.println(bSearch1); //singleton same object
 		int result = bSearch.binarySearch(new int[] {12,3,1,36,73, 199}, 36);
 		System.out.println(result);
 	}
