@@ -22,7 +22,7 @@ public class Scratch5StepsApplication {
 		BinarySearchImpl bSearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl bSearch1 = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(bSearch);
-		System.out.println(bSearch1); //singleton same object
+		System.out.println(bSearch1);
 		int result = bSearch.binarySearch(new int[] {12,3,1,36,73, 199}, 36);
 		System.out.println(result);
 	}
