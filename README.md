@@ -1,2 +1,2 @@
-# sprinfg-beginner-class
+# spring-beginner-class
 ## learning from https://github.com/in28minutes/spring-master-class
