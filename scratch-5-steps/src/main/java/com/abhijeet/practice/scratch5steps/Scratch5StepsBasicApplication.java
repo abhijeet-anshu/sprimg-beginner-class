@@ -1,12 +1,16 @@
 package com.abhijeet.practice.scratch5steps;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.abhijeet.practice.scratch5steps.basic.start.BinarySearchImpl;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan("com.abhijeet.practice.scratch5steps")
+//@SpringBootApplication
 public class Scratch5StepsBasicApplication {
 
 	public static void main(String[] args) {
@@ -20,7 +24,8 @@ public class Scratch5StepsBasicApplication {
 		//Application Context
 		
 		ApplicationContext applicationContext = 
-				SpringApplication.run(Scratch5StepsBasicApplication.class, args);
+				new AnnotationConfigApplicationContext(Scratch5StepsBasicApplication.class);
+//				SpringApplication.run(Scratch5StepsBasicApplication.class, args);
 		BinarySearchImpl bSearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl bSearch1 = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(bSearch);
