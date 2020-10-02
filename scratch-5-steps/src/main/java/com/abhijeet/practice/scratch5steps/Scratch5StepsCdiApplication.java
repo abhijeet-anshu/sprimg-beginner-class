@@ -2,14 +2,14 @@ package com.abhijeet.practice.scratch5steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.abhijeet.practice.scratch5steps.cdi.SomeCdiBusiness;
 
-@SpringBootApplication
+//@SpringBootApplication
+@Configuration
 @ComponentScan("com.abhijeet.practice.scratch5steps.cdi")
 public class Scratch5StepsCdiApplication {
 
@@ -19,12 +19,14 @@ public class Scratch5StepsCdiApplication {
 		
 		
 		
-		ApplicationContext applicationContext = 
-				SpringApplication.run(Scratch5StepsCdiApplication.class, args);
+		try(AnnotationConfigApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(Scratch5StepsCdiApplication.class))
+		{
+				//SpringApplication.run(Scratch5StepsCdiApplication.class, args);
 		SomeCdiBusiness business = applicationContext.getBean(SomeCdiBusiness.class);
 		
-		LOGGER.info("{} dao-{}", business, business.getSomeCdiDao());
-		
+		LOGGER.info("~~~~~{} dao-{}", business, business.getSomeCdiDao());
+		}
 		
 	}
 
