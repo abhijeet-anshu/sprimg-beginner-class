@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.abhijeet.practice.scratch5steps.scope.PersonDAO;
+import com.abhijeet.practice.scratch5steps.basic.scope.PersonDAO;
 
 @SpringBootApplication
 public class Scratch5StepsScopeApplication {

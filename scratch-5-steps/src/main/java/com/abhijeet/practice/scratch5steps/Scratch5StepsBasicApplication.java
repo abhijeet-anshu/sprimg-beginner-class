@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.abhijeet.practice.scratch5steps.basic.BinarySearchImpl;
+import com.abhijeet.practice.scratch5steps.basic.start.BinarySearchImpl;
 
 @SpringBootApplication
-public class Scratch5StepsApplication {
+public class Scratch5StepsBasicApplication {
 
 	public static void main(String[] args) {
 		
@@ -20,7 +20,7 @@ public class Scratch5StepsApplication {
 		//Application Context
 		
 		ApplicationContext applicationContext = 
-				SpringApplication.run(Scratch5StepsApplication.class, args);
+				SpringApplication.run(Scratch5StepsBasicApplication.class, args);
 		BinarySearchImpl bSearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl bSearch1 = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(bSearch);

@@ -1,11 +1,16 @@
-package com.abhijeet.practice.scratch5steps.basic;
+package com.abhijeet.practice.scratch5steps.basic.start;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("bubble")
-public class BubbleSortAlgorithm implements SortAlgorithm {
+@Qualifier("quick")
+public class QuickSortAlgorithm implements SortAlgorithm {
+	
+	private QuickSortAlgorithm()
+	{
+		
+	}
 	
 	@Override
 	public int[] sort(int[] numbers)
